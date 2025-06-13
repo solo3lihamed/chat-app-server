@@ -67,7 +67,7 @@ export const getMessages = async (req, res) => {
             participants: { $all: [senderId, userId] }
         }).populate({
             path: 'messages',
-            select: 'content senderId receiverId createdAt',
+            // select: 'content senderId receiverId createdAt',
             options: { sort: { createdAt: 1 } } // Sort messages by date ascending
         });
 
